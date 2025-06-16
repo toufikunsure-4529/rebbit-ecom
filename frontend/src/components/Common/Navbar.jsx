@@ -1,7 +1,7 @@
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { AiFillShopping } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from "./SearchBar";
 import CartDrawer from "../Layout/CartDrawer";
@@ -10,15 +10,32 @@ import { IoMdClose } from "react-icons/io";
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [navDrawerOpen, setNavDrawerOpen] = useState(false)
+  const [isSticky, setIsSticky] = useState(false)
   const toggleCartDrawer = () => {
     setDrawerOpen(!drawerOpen);
   }
   const toggleNavDrawer = () => {
     setNavDrawerOpen(!navDrawerOpen)
   }
+
+  useEffect(() => {
+    const handleScrollWindow = () => {
+      if (window.screenY > 200) {
+        setIsSticky(true)
+      }
+      else {
+        setIsSticky(false)
+      }
+    }
+    window.addEventListener('scroll', handleScrollWindow)
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollWindow)
+    }
+  }, [])
   return (
     <>
-      <nav className='container mx-auto  px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4'>
+      <nav className={`container mx-auto  px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4 ${isSticky ? "sticky-nav bg-white" : ""}`}>
         {/* Left - Logo */}
         <div>
           <Link to="/" className='text-2xl font-medium'>
