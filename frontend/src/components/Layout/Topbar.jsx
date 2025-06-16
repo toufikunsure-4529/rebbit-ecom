@@ -1,9 +1,10 @@
+import React from 'react'
 import React from "react";
 import { TbBrandMeta } from "react-icons/tb";
 import { IoLogoInstagram } from "react-icons/io5";
 import { RiTwitterXLine } from "react-icons/ri";
 
-const Topbar = () => {
+const TopBar = () => {
   return (
     <div className="bg-rebbit-red text-white">
       <div className="container mx-auto  px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 ">
@@ -32,7 +33,10 @@ const Topbar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Topbar;
+export default TopBar
+
+
+
