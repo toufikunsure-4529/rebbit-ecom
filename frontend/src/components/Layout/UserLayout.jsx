@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "../Common/Header";
 import Footer from "../Common/Footer";
+import { Outlet } from "react-router-dom";
 const UserLayout = () => {
   return (
     <>
       <Header />
-      {/* main Content  */}
-      <img src="/hero-bg.jpg" alt="hero-bg" className="w-full object-cover" />
-      THis is Main
+      <main>
+        <Outlet />
+
+      </main>
       <Footer />
     </>
   );

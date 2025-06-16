@@ -18,7 +18,7 @@ const Navbar = () => {
   }
   return (
     <>
-      <nav className='container mx-auto flex items-center justify-between py-4 px-6'>
+      <nav className='container mx-auto  px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4'>
         {/* Left - Logo */}
         <div>
           <Link to="/" className='text-2xl font-medium'>
@@ -28,16 +28,16 @@ const Navbar = () => {
 
         {/* Center Nav menu */}
         <div className='hidden md:flex space-x-6'>
-          <Link to="#" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
+          <Link to="#" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
             Men
           </Link>
-          <Link to="#" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
+          <Link to="#" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
             Women
           </Link>
-          <Link to="#" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
+          <Link to="#" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
             Top Wear
           </Link>
-          <Link to="#" className='text-gray-700 hover:text-black text-sm font-medium uppercase'>
+          <Link to="#" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
             Bottom Wear
           </Link>
         </div>

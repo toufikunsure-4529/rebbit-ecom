@@ -6,6 +6,7 @@ export default {
       colors: {
         "rebbit-red": "#ea2e0e",
       },
+      
     },
   },
   plugins: [],
