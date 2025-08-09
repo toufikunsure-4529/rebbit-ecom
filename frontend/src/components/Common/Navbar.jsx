@@ -45,7 +45,7 @@ const Navbar = () => {
 
         {/* Center Nav menu */}
         <div className='hidden md:flex space-x-6'>
-          <Link to="#" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
+          <Link to="/collection/all" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
             Men
           </Link>
           <Link to="#" className='text-gray-700 hover:text-black text-md font-semibold uppercase'>
@@ -79,6 +79,7 @@ const Navbar = () => {
       </nav>
 
       <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
+      
       {/* Mobile Navigation */}
       <div
         className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 transition-transform duration-300 transform ${navDrawerOpen ? "translate-x-0" : "-translate-x-full"

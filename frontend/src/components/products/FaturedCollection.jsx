@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { FaCheck, FaClock, FaShieldAlt } from "react-icons/fa"
-import fetaured from "../assets/featured.webp"
+import fetaured from "../../assets/featured.webp"
 
 const FeaturedCollection = () => {
     return (

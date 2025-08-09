@@ -103,7 +103,7 @@ const ProductCard = ({ product }) => {
 
 const ProductGrid = ({ products }) => {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6 gap-2">
+        <div className="grid max-w-screen-2xl grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6 gap-2">
             {products.map((product) => (
                 <ProductCard key={product._id} product={product} />
             ))}
